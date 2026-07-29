@@ -1,16 +1,62 @@
-fastembed==0.8.0
-gradio==6.20.0
-ipykernel==7.3.0
-langchain-huggingface==1.2.2
-langchain-ollama==1.1.0
-langchain-qdrant==1.1.0
-langchain-text-splitters==1.1.2
-langfuse==4.14.1
-langgraph==1.2.9
-matplotlib==3.11.1
-pymupdf4llm==1.28.0
-python-dotenv==1.2.2
-ragas==0.4.3
-seaborn==0.13.2
-sentence-transformers==5.6.1
-tiktoken==0.13.0
+# ============================================================
+# LangChain 核心生态
+# ============================================================
+langchain>=1.2.0                # 主包：Chain/Agent 快速原型
+langchain-core>=1.2.0           # 核心抽象：BaseMessage, BaseTool, BaseLLM
+langchain-community>=0.4.0      # 社区集成：文档加载器、向量库等
+
+# ============================================================
+# LangChain 集成（按需加载不同 LLM 提供商）
+# ============================================================
+langchain-openai                # OpenAI / 兼容 API
+langchain-ollama>=1.1.0         # Ollama 本地推理
+langchain-groq                  # Groq 云端高速推理
+langchain-huggingface>=1.2.0    # HuggingFace Embedding / 模型
+langchain-qdrant>=1.1.0         # Qdrant 向量库集成
+langchain-text-splitters>=1.1.0 # 文档切片器
+
+# ============================================================
+# LangGraph — 有状态 Agent 编排
+# ============================================================
+langgraph>=1.2.0                # StateGraph / Send / Command / Checkpoint
+
+# ============================================================
+# 可观测 & 评估
+# ============================================================
+langfuse>=4.14.0                # LLM 调用追踪（对标 LangSmith，开源免费）
+langsmith>=0.4.0                # LangSmith 官方 SDK（学习用）
+ragas>=0.4.0                    # RAG 评估框架（faithfulness, relevance 等指标）
+
+# ============================================================
+# 嵌入 & 模型
+# ============================================================
+sentence-transformers>=5.6.0    # 本地 Embedding 模型加载
+fastembed>=0.8.0                # Qdrant 官方轻量 Embedding（含 BM25 稀疏）
+
+# ============================================================
+# 文档处理
+# ============================================================
+pymupdf4llm>=1.28.0             # PDF → Markdown 转换
+pypdf>=5.0.0                    # 备选 PDF 解析
+markitdown>=0.0.1               # 通用文档 → Markdown（Office、图片、音频等）
+
+# ============================================================
+# UI & 工具
+# ============================================================
+gradio>=6.20.0                  # ML Demo Web UI
+streamlit>=1.40.0               # 数据分析 / 仪表盘（备选）
+python-dotenv>=1.2.0            # .env 环境变量加载
+tiktoken>=0.13.0                # OpenAI Token 计数
+
+# ============================================================
+# 数据处理 & 可视化
+# ============================================================
+matplotlib>=3.11.0
+seaborn>=0.13.0
+pandas>=2.0.0
+
+# ============================================================
+# Notebook 环境
+# ============================================================
+# ipykernel>=7.3.0
+# jupyter>=1.1.0

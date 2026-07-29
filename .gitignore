@@ -9,6 +9,7 @@ qdrant_db/
 markdown_docs/
 parent_store/
 docs/
+test/
 
 notebooks/output.csv
 
